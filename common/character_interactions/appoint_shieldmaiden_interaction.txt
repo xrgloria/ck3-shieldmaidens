@@ -104,10 +104,7 @@ appoint_shieldmaiden_interaction = {
         base = 20
     }
 
-    # TODO: balance cost
-    cost = {
-        gold = 50
-    }
+    cost = { gold = appoint_shieldmaiden_cost }
 
     on_accept = {
         scope:actor = {
