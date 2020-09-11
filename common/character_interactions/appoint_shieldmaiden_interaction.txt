@@ -111,15 +111,12 @@ appoint_shieldmaiden_interaction = {
 
     on_accept = {
         scope:actor = {
-            send_interface_message = {
+            send_interface_toast = {
                 type = event_generic_neutral
                 title = msg_appointed_shieldmaiden_interaction_title
                 right_icon = scope:recipient
 
-                #fire_court_physician_effect = {
-				#	PHYSICIAN = scope:recipient
-				#	EMPLOYER = scope:actor
-				#}
+                custom_tooltip = msg_appointed_shieldmaiden_interaction_desc
             }
 
             add_prestige = 25
