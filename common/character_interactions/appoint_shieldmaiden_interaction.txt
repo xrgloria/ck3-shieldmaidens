@@ -116,10 +116,10 @@ appoint_shieldmaiden_interaction = {
                 title = msg_appointed_shieldmaiden_interaction_title
                 right_icon = scope:recipient
 
-                fire_court_physician_effect = {
-					PHYSICIAN = scope:recipient
-					EMPLOYER = scope:actor
-				}
+                #fire_court_physician_effect = {
+				#	PHYSICIAN = scope:recipient
+				#	EMPLOYER = scope:actor
+				#}
             }
 
             add_prestige = 25
