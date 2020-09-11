@@ -1,0 +1,4 @@
+﻿l_english:
+ trait_shieldmaiden:0 "Shieldmaiden"
+ trait_shieldmaiden_desc:0 "This character a Shieldmaiden."
+ trait_shieldmaiden_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a Shieldmaiden."

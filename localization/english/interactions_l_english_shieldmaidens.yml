@@ -1,0 +1,6 @@
+﻿l_english:
+ appoint_shieldmaiden_interaction:0 "Appoint as Shieldmaiden"
+ msg_appointed_shieldmaiden_interaction_title:0 "Shieldmaiden Appointed"
+ msg_appointed_shieldmaiden_interaction_desc:0 "[THIS.Char.GetShortUIName] becomes your [shieldmaiden|E]"
+
+ relieve_shieldmaiden_interaction:0 "Relieve Shieldmaiden"

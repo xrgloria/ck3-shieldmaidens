@@ -1,0 +1,142 @@
+appoint_shieldmaiden_interaction = {
+    category = interaction_category_vassal
+
+    # maybe AIs a bit later
+
+    is_shown = {
+        scope:recipient = {
+            NOT = { 
+                this = scope:actor
+                # Can't be a shieldmaiden again
+                has_trait = shieldmaiden
+            }
+
+            is_female = yes
+            is_adult = yes
+
+            OR = { 
+                has_trait = brave
+                has_trait = proud
+                has_trait = ambitious
+                has_trait = diligent
+                has_trait = just
+                has_trait = gregarious
+                has_trait = blademaster_1
+                has_trait = blademaster_2
+                has_trait = blademaster_3
+                has_trait = hunter_1
+                has_trait = hunter_2
+                has_trait = hunter_3
+                has_trait = gallant
+                has_trait = varangian
+                has_trait = strong
+                has_trait = athletic
+                has_trait = education_martial_prowess_1
+                has_trait = education_martial_prowess_2
+                has_trait = education_martial_prowess_3
+                has_trait = education_martial_prowess_4
+                has_trait = education_martial_1
+                has_trait = education_martial_2
+                has_trait = education_martial_3
+                has_trait = education_martial_4
+                has_trait = berserker
+            }
+            
+            # Anyone can be a shieldmaiden if they are in the culture
+            # has_culture_group = culture_group:north_germanic_group
+
+            is_courtier_of = scope:actor
+        }
+
+        scope:actor = {
+            is_ruler = yes
+            OR = {
+                is_ai = no
+                highest_held_title_tier >= 2
+            }
+
+            has_culture_group = culture_group:north_germanic_group
+            faith.religion = religion:germanic_religion
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        NOT = {
+            scope:recipient = {
+                is_imprisoned = yes
+            }
+        }
+
+        # Needs enough prowess
+        scope:recipient = {
+            custom_description = {
+                text = not_enough_prowess
+                prowess > 9
+            }
+        }
+
+        # Can't be incapable
+        NOT = {
+            scope:recipient = {
+                has_trait = incapable
+            }
+        }
+
+        # Can't be inbred
+        NOT = {
+            scope:recipient = {
+                has_trait = inbred
+            }
+        }
+
+        # Can't be an imbecile
+        NOT = {
+            scope:recipient = {
+               has_trait = imbecile 
+            }
+        }
+    }
+
+    greeting = positive
+
+    # TODO: make more conditions for acceptance
+    ai_accept = {
+        base = 20
+    }
+
+    # TODO: balance cost
+    cost = {
+        gold = 50
+    }
+
+    on_accept = {
+        scope:actor = {
+            send_interface_message = {
+                type = event_generic_neutral
+                title = msg_appointed_shieldmaiden_interaction_title
+                right_icon = scope:recipient
+
+                fire_court_physician_effect = {
+					PHYSICIAN = scope:recipient
+					EMPLOYER = scope:actor
+				}
+            }
+
+            add_prestige = 25
+        }
+
+        scope:recipient = {
+            if = {
+                add_trait = shieldmaiden
+
+                add_prestige = 25
+
+                add_opinion = {
+                    target = scope:actor
+                    modifier = grateful_opinion
+                    opinion = 50
+                }
+            }
+        }
+    }
+}

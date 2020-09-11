@@ -1,0 +1,25 @@
+shieldmaiden = {
+	index = 612
+	
+	martial = 2
+	prowess = 10
+
+	same_opinion = 15
+	same_faith_opinion = 5
+
+	monthly_piety_gain_mult = 0.1
+
+	ai_zeal = 10
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_shieldmaiden_desc
+			}
+			desc = trait_shieldmaiden_character_desc
+		}
+	}
+}
