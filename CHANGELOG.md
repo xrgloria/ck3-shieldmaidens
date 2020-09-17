@@ -1,5 +1,9 @@
 # Change Log
 
+## [Unreleased] - XX-XX-2020
+### Added
+- Shieldmaidens can now be marshalls
+
 ## [0.3] - 09-16-2020
 ### Added
 - Letter event to Shieldmaiden interaction on accept
