@@ -41,9 +41,40 @@ Based on CK2's Shieldmaiden trait.
 
 [h1]Content[/h1]
 [list]
-    [*] Adds new Shieldmaiden trait for female warriors in the court of a Pagan Norse leader (North Germantic Culture Group [Danish, Norse, Norwegian, and Swedish] and Ásatrú)
+    [*] Adds new Shieldmaiden trait for female warriors in the court of a Pagan Norse leader
     [*] Appoint them via a new interaction, which gives them the Shieldmaiden trait
     [*] Relieve them of their duties with a new interaction, which removes the Shieldmaiden trait
+[/list]
+
+[h2]Ruler (Player)[/h2]
+
+[h3]Requirements[/h3]
+[list]
+    [*] North Germantic Culture Group (Danish, Norse, Norwegian, and Swedish)
+    [*] Reformed or unreformed Ásatrú
+    [*] Highest held title tier is a County or greater
+[/list]
+
+[h2]Shieldmaiden[/h2]
+Replies from potential Shieldmaidens might take from 2-7 days.
+
+[h3]Requirements[/h3]
+[list]
+    [*] Adult
+    [*] Female (kinda a given but still listing it here)
+    [*] Prowess must be 10 or greater
+    [*] Any of the following traits (brave, proud, ambitious, diligent, just, blademaster [any tier], hunter [any tier], gallant, varangian, berserker, strong, athletic, any martial trait)
+    [*] Courtier of the ruler
+[/list]
+
+[h3]Trait[/h3]
+[list]
+    [*] Martial +4
+    [*] Prowess +6
+    [*] Other Shieldmaiden opinion +15
+    [*] Same faith opinion +5
+    [*] Monthly piety gain +10%
+    [*] Zealousness +10
 [/list]
 
 [h1]Features[/h1]
@@ -56,12 +87,11 @@ Based on CK2's Shieldmaiden trait.
 [h1]Roadmap[/h1]
 [list]
     [*] Better balance
-    [*] Add AI acceptance modifiers to Shieldmaiden appointment and removal
+    [*] Add AI acceptance modifiers to Shieldmaiden removal
     [*] Add Events with liege (like CK2)
     [*] Add Events for female warriors that ask to become Shielmaidens
     [*] Make it AI compatible, so they will also have Shieldmaidens
     [*] Make it compatible with all supported languages
-    [*] Allow hostile religions leaders who somehow gain Shieldmaidens to remove the trait on interaction? IDK why that'd want to...
 [/list]
 
 [h1]Support & Contact[/h1]

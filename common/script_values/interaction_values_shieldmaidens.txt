@@ -27,3 +27,28 @@ appoint_shieldmaiden_cost = {
     #    }
     #}
 }
+
+appoint_shieldmaiden_prestige_gain = {
+	value = 25
+
+	# TODO: adjust this better
+	multiply = {
+		value = root.primary_title.tier
+		subtract = 1
+		min = 1
+	}
+	if = {
+		limit = {
+			root.primary_title.tier > tier_duchy
+		}
+		add = 50
+	}
+	if = {
+		limit = {
+			root= {
+				has_government = tribal_government
+			}
+		}
+		multiply = 0.5
+	}
+}

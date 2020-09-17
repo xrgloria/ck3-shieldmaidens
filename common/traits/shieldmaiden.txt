@@ -1,8 +1,8 @@
 shieldmaiden = {
 	index = 612
 	
-	martial = 2
-	prowess = 10
+	martial = 4
+	prowess = 6
 
 	same_opinion = 15
 	same_faith_opinion = 5
