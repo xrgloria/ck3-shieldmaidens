@@ -63,7 +63,22 @@ Replies from potential Shieldmaidens might take from 2-7 days.
     [*] Adult
     [*] Female (kinda a given but still listing it here)
     [*] Prowess must be 10 or greater
-    [*] Any of the following traits (brave, proud, ambitious, diligent, just, blademaster [any tier], hunter [any tier], gallant, varangian, berserker, strong, athletic, any martial trait)
+    [*] Any of the following traits 
+    [list]
+        [*] Brave
+        [*] Proud
+        [*] Ambitious
+        [*] Diligent
+        [*] Just
+        [*] Blademaster [any tier]
+        [*] Hunter [any tier]
+        [*] Gallant
+        [*] Varangian
+        [*] Berserker
+        [*] Strong
+        [*] Athletic
+        [*] Any martial education trait
+    [/list]
     [*] Courtier of the ruler
 [/list]
 
