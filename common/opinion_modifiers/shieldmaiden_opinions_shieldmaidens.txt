@@ -1,4 +1,4 @@
-appointed_shieldmaiden_opinion = {
+﻿appointed_shieldmaiden_opinion = {
     opinion = 35
     years = 10
 }

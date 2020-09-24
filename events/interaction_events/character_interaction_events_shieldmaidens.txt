@@ -1,4 +1,4 @@
-namespace = char_interaction
+﻿namespace = char_interaction
 
 # Offer Appointment Response: Accepted
 char_interaction.6121 = {

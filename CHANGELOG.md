@@ -1,8 +1,13 @@
 # Change Log
 
-## [Unreleased] - XX-XX-2020
+## [0.4] - 09-24-2020
 ### Added
-- Shieldmaidens can now be marshalls
+- Shieldmaidens can now be marshals
+
+### Fixed
+- Mod files are now the correct encoding
+- Shieldmaiden Interaction Cost now refers to the correct scope
+- "Recinded Recognition as Shieldmaiden" opinion now removed when you recognize a character again
 
 ## [0.3] - 09-16-2020
 ### Added

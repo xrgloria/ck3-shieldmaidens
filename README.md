@@ -35,7 +35,7 @@ It's my first mod for the game, let me know if you run into any issues or have s
 ### For Steam
 [b]WIP[/b]
 
-As a Pagan Norse leader, appoint Shieldmaidens to be your champions and commanders. If you get annoyed, relieve them of their duties. 
+As a Pagan Norse leader, appoint Shieldmaidens to be your champions, commanders, and now marshal!. If you get annoyed, relieve them of their duties. 
 
 Based on CK2's Shieldmaiden trait.
 
@@ -66,7 +66,6 @@ Replies from potential Shieldmaidens might take from 2-7 days.
     [*] Any of the following traits 
     [list]
         [*] Brave
-        [*] Proud
         [*] Ambitious
         [*] Diligent
         [*] Just
@@ -78,6 +77,10 @@ Replies from potential Shieldmaidens might take from 2-7 days.
         [*] Strong
         [*] Athletic
         [*] Any martial education trait
+    [/list]
+    [*] None of the following traits
+    [list]
+        [*] Inbred
     [/list]
     [*] Courtier of the ruler
 [/list]
@@ -107,6 +110,10 @@ Replies from potential Shieldmaidens might take from 2-7 days.
     [*] Add Events for female warriors that ask to become Shielmaidens
     [*] Make it AI compatible, so they will also have Shieldmaidens
     [*] Make it compatible with all supported languages
+    [*] Add compatability with the following mods
+    [list]
+        [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2225452775] Panteon of the Gods [/url]
+    [/list]
 [/list]
 
 [h1]Support & Contact[/h1]

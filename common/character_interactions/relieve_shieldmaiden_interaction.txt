@@ -1,4 +1,4 @@
-relieve_shieldmaiden_interaction = {
+﻿relieve_shieldmaiden_interaction = {
     category = interaction_category_vassal
 
     is_shown = {

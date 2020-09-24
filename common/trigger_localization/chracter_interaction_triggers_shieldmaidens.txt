@@ -1,4 +1,4 @@
-not_enough_prowess = {
+﻿not_enough_prowess = {
     global_not = RECIPIENT_PROWESS_NOT_ENOUGH
     first_not = RECIPIENT_PROWESS_NOT_ENOUGH
     third_not = RECIPIENT_PROWESS_NOT_ENOUGH

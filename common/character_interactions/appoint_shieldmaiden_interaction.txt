@@ -1,4 +1,4 @@
-appoint_shieldmaiden_interaction = {
+﻿appoint_shieldmaiden_interaction = {
     category = interaction_category_vassal
 
     # maybe AIs a bit later
@@ -16,7 +16,6 @@ appoint_shieldmaiden_interaction = {
 
             OR = { 
                 has_trait = brave
-                has_trait = proud
                 has_trait = ambitious
                 has_trait = diligent
                 has_trait = just
@@ -85,13 +84,6 @@ appoint_shieldmaiden_interaction = {
         NOT = {
             scope:recipient = {
                 has_trait = inbred
-            }
-        }
-
-        # Can't be an imbecile
-        NOT = {
-            scope:recipient = {
-               has_trait = imbecile 
             }
         }
     }
@@ -376,6 +368,11 @@ appoint_shieldmaiden_interaction = {
         scope:recipient = {
             if = {
                 add_trait = shieldmaiden
+
+				remove_opinion = {
+                    target = scope:actor
+                    modifier = relieved_shieldmaiden_opinion
+                }
 
                 add_prestige = appoint_shieldmaiden_prestige_gain
 

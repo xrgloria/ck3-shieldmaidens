@@ -1,4 +1,4 @@
-can_be_combatant_based_on_gender_trigger = {
+﻿can_be_combatant_based_on_gender_trigger = {
 	custom_description = {
 		text = "can_be_combatant_based_on_gender"
 		object = this
