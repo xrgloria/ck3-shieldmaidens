@@ -35,7 +35,7 @@ It's my first mod for the game, let me know if you run into any issues or have s
 ### For Steam
 [b]WIP[/b]
 
-As a Pagan Norse leader, appoint Shieldmaidens to be your champions, commanders, and now marshal!. If you get annoyed, relieve them of their duties. 
+As a Pagan Norse leader, appoint Shieldmaidens to be your champions, commanders, and now Marshal! If you get annoyed, relieve them of their duties. 
 
 Based on CK2's Shieldmaiden trait.
 

@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.4.1] - 09-30-2020
+### Changed
+- Bumped the game version
+
 ## [0.4] - 09-24-2020
 ### Added
 - Shieldmaidens can now be marshals
