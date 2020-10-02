@@ -1,5 +1,16 @@
 # Change Log
 
+## [0.5] - Unreleased
+### Changed
+
+### Added
+
+### Fixed
+
+## [0.4.2] - 10-02-2020
+### Changed
+- Bumped the game version
+
 ## [0.4.1] - 09-30-2020
 ### Changed
 - Bumped the game version
@@ -26,7 +37,7 @@
 - "Relieve Shieldmaiden" now "Recinded Shieldmaiden Recognition"
 - Shieldmaiden trait
     - Prowess bonus bumped down from 10 to 6
-    - Martial bonus bumper up from 2 to 4
+    - Martial bonus bumped up from 2 to 4
 - Shieldmaiden interaction
     - Prestige gain is now based on primary title tier just like cost
     - Opinion gain "Grateful Opinion" now "Recognized as Shieldmaiden"
