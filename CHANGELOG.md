@@ -7,6 +7,10 @@
 
 ### Fixed
 
+## [0.4.3] - 10-15-2020
+### Changed
+- Bumped the game version
+
 ## [0.4.2] - 10-02-2020
 ### Changed
 - Bumped the game version
