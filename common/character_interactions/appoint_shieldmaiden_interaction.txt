@@ -369,11 +369,6 @@
             if = {
                 add_trait = shieldmaiden
 
-				remove_opinion = {
-                    target = scope:actor
-                    modifier = relieved_shieldmaiden_opinion
-                }
-
                 add_prestige = appoint_shieldmaiden_prestige_gain
 
                 add_opinion = {
@@ -381,6 +376,19 @@
                     modifier = appointed_shieldmaiden_opinion
                 }
             }
+			if = {
+				limit = {
+					has_opinion_modifier = {
+						target = scope:actor
+						modifier = relieved_shieldmaiden_opinion
+					}
+				}
+
+				remove_opinion = {
+                    target = scope:actor
+                    modifier = relieved_shieldmaiden_opinion
+                }
+			}
         }
     }
 

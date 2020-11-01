@@ -105,7 +105,6 @@ Replies from potential Shieldmaidens might take from 2-7 days.
 [h1]Roadmap[/h1]
 [list]
     [*] Better balance
-    [*] Add AI acceptance modifiers to Shieldmaiden removal
     [*] Add Events with liege (like CK2)
     [*] Add Events for female warriors that ask to become Shielmaidens
     [*] Make it AI compatible, so they will also have Shieldmaidens

@@ -4,8 +4,11 @@
 ### Changed
 
 ### Added
+- AI acceptance modifiers for "Relieve Shieldmaiden" interaction
+- Letter event to "Relieve Shieldmaiden" interaction
 
 ### Fixed
+- Opinion update message during appointment/recinding appointment will only appear if the character has the specific opinion
 
 ## [0.4.3] - 10-15-2020
 ### Changed

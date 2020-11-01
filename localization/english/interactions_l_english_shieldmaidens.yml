@@ -12,3 +12,4 @@
  relieve_shieldmaiden_interaction:0 "Recind Shieldmaiden Recognition"
 
  OFFER_SHIELDMAIDEN_APPOINTMENT_NOTIFICATION:0 "I wish to recognize you as a Shieldmaiden given your prowess and abilities."
+ RECIND_SHIELDMAIDEN_APPOINTMENT_NOTIFICATION:0 "I have come to the conclusion that you cannot be entrusted with the dignity and responsibility of the [landed_title.GetName]. I therefore request that you relinquish this title forthwith."

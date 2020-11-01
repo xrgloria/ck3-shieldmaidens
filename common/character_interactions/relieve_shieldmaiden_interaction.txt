@@ -23,9 +23,9 @@
     }
 
     greeting = negative
-    # TODO: make more conditions for acceptance
+
     ai_accept = {
-        base = 1
+        base = 0
     }
 
     on_accept = {
@@ -33,16 +33,25 @@
             if = {
                 remove_trait = shieldmaiden
 
-                remove_opinion = {
-                    target = scope:actor
-                    modifier = appointed_shieldmaiden_opinion
-                }
-
                 add_opinion = {
                     target = scope:actor
                     modifier = relieved_shieldmaiden_opinion
                 }
             }
+
+            if = {
+				limit = {
+					has_opinion_modifier = {
+						target = scope:actor
+						modifier = appointed_shieldmaiden_opinion
+					}
+				}
+
+				remove_opinion = {
+                    target = scope:actor
+                    modifier = appointed_shieldmaiden_opinion
+                }
+			}
         }
     }
 }
