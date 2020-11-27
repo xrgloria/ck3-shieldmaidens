@@ -1,11 +1,11 @@
 # Change Log
 
-## [0.5] - Unreleased
+## [0.4.4] - 11-27-2020
 ### Changed
+- Bumped supported game version
 
 ### Added
-- AI acceptance modifiers for "Relieve Shieldmaiden" interaction
-- Letter event to "Relieve Shieldmaiden" interaction
+- Auto accept for "Recind Shieldmaiden Appointment"
 
 ### Fixed
 - Opinion update message during appointment/recinding appointment will only appear if the character has the specific opinion

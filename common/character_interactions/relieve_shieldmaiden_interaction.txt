@@ -22,11 +22,24 @@
         }
     }
 
-    greeting = negative
+    #greeting = negative
 
-    ai_accept = {
-        base = 0
-    }
+    #ai_accept = {
+    #    base = 0
+    #
+    #    modifier = {
+	#		scope:hook = yes
+	#		add = 40
+	#		desc = SCHEME_WEAK_HOOK_USED
+	#	}
+    #
+	#	opinion_modifier = { # Opinion Factor
+	#		who = scope:recipient
+	#		opinion_target = scope:actor
+	#		multiplier = 0.8
+	#		desc = AI_OPINION_REASON
+	#	}
+    #}
 
     on_accept = {
         scope:recipient = {
@@ -54,4 +67,7 @@
 			}
         }
     }
+
+    # TODO: temporarily set to auto_accept while getting numbers down
+    auto_accept = yes
 }
