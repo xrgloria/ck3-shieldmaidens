@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.4.5] - 12-09-2020
+### Changed
+- Bumped the game version
+
 ## [0.4.4] - 11-27-2020
 ### Changed
 - Bumped supported game version
