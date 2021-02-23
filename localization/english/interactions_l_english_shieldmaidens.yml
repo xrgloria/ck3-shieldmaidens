@@ -9,7 +9,7 @@
  char_interaction.6122.desc:0 "I do not need your recognition as a Shieldmaiden and would prefer to stay out of any duties that go with it."
  char_interaction.6122.a:0 "I shall have to explore other options..."
 
- relieve_shieldmaiden_interaction:0 "Recind Shieldmaiden Recognition"
+ relieve_shieldmaiden_interaction:0 "Rescind Shieldmaiden Recognition"
 
  OFFER_SHIELDMAIDEN_APPOINTMENT_NOTIFICATION:0 "I wish to recognize you as a Shieldmaiden given your prowess and abilities."
  RECIND_SHIELDMAIDEN_APPOINTMENT_NOTIFICATION:0 "I have come to the conclusion that you cannot be entrusted with the recognition of being a Shieldmaiden. I therefore relieve you of your recognition."
