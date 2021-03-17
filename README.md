@@ -34,6 +34,23 @@ Support & Contact[/h1]
 It's my first mod for the game, let me know if you run into any issues or have suggestions.
 
 ### For Steam
+[b]IMPORTANT[/b]
+
+With the Northern Lords Flavor Pack coming out CK3 will officially support Shieldmaidens. Yay! I made this mod because that it was an important aspect to my gameplay and am very happy so many others thought the same. I still had plans and made more progress with the mod but I'm going to pause this mod for now to check out the flavor pack and how they handle the Shieldmaidens. 
+
+I had a couple ideas of how I'd like to approach this mod's future.
+
+[list]
+  [*] Unique Shieldmaiden events that add onto what the flavor pack does.
+  [*] Remove the Shieldmaidens added to the flavor pack and replace with this
+  [*] A mix of both?
+[/list]
+
+Add a comment in the [url=https://steamcommunity.com/workshop/filedetails/discussion/2225452775/5312531598978553902/]discussion[/url] I created for this if you guys would like me to continue this mod or have ideas of where you'd like it to go.
+
+------------------------------
+
+
 As a Pagan Norse leader, appoint Shieldmaidens to be your champions, commanders, and now Marshal! If you get annoyed, relieve them of their duties. 
 
 Based on CK2's Shieldmaiden trait.
