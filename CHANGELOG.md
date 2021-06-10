@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.4.9] - 06-10-2021
+### Changed
+- Bumped the game version
+
 ## [0.4.8] - 06-02-2021
 ### Changed
 - Bumped the game version
