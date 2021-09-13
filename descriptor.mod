@@ -1,4 +1,4 @@
-version="0.4.9"
+version="0.5.0"
 tags={
 	"Culture"
 	"Character Interactions"
@@ -7,5 +7,5 @@ tags={
 }
 name="Shieldmaidens"
 picture="thumbnail.png"
-supported_version="1.4.0"
+supported_version="1.4.4"
 remote_file_id="2225452775"

@@ -1,5 +1,11 @@
 # Change Log
-
+## [0.5.0] - 09-15-2021
+### Added
+- Decisions "Train as Shieldmaiden" and "Retire as Shieldmaiden" for rulers to become Shieldmaidens as well
+    - Same requirment as recognizing/recinding recognition of Shieldmaiden
+- Requirement for shieldmaiden
+    - Must be physically able adult
+### Changed
 ## [0.4.9] - 06-10-2021
 ### Changed
 - Bumped the game version

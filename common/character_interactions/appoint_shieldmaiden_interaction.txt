@@ -59,6 +59,8 @@
     }
 
     is_valid_showing_failures_only = {
+		is_physically_able_adult = yes
+		
         NOT = {
             scope:recipient = {
                 is_imprisoned = yes

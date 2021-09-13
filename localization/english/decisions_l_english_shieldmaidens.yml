@@ -1,0 +1,11 @@
+﻿l_english:
+  train_as_shieldmaiden_decision:0 "Train as a Shieldmaiden"
+  train_as_shieldmaiden_decision_desc:0 "I've noticed that there is little that differs from me or my men when they are on the field of battle. With training and hard work I can move myself beyond the current boundries and join them in battles as well."
+  train_as_shieldmaiden_decision_tooltip:0 "I become a Shieldmaiden"
+  train_as_shieldmaiden_decision_confirm:0 "Starting Training"
+  retire_as_shieldmaiden_decision:0 "Retire as a Shieldmaiden"
+  retire_as_shieldmaiden_decision_desc:0 "Giving a look back at the battlefields I once called home. I do not feel the same pull to join them as I once did. Maybe it is time to put up my sword and shield."
+  retire_as_shieldmaiden_decision_tooltip:0 "I put up my sword and shield."
+  retire_as_shieldmaiden_decision_confirm:0 "Retire"
+  msg_became_shieldmaiden:0 "Become Shieldmaiden"
+  msg_stopped_being_shieldmaiden:0 "Retire as Shieldmaiden"

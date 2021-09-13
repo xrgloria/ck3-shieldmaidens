@@ -1,0 +1,138 @@
+﻿@shieldmaiden_cooldown_time = 1825
+### Train as Shieldmaiden
+train_as_shieldmaiden_decision = {
+	ai_check_interval = 0
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+
+	desc = train_as_shieldmaiden_decision_desc
+
+	selection_tooltip = train_as_shieldmaiden_decision_tooltip
+
+    cooldown = { days = @shieldmaiden_cooldown_time }
+
+	is_shown = {
+		NOT = { 
+            # Can't be a shieldmaiden again
+            has_trait = shieldmaiden 
+        }
+
+        is_female = yes
+        is_adult = yes
+
+        OR = { 
+            has_trait = brave
+            has_trait = ambitious
+            has_trait = diligent
+            has_trait = just
+            has_trait = blademaster_1
+            has_trait = blademaster_2
+            has_trait = blademaster_3
+            has_trait = hunter_1
+            has_trait = hunter_2
+            has_trait = hunter_3
+            has_trait = gallant
+            has_trait = varangian
+            has_trait = berserker
+            has_trait = strong
+            has_trait = athletic
+            has_trait = education_martial_prowess_1
+            has_trait = education_martial_prowess_2
+            has_trait = education_martial_prowess_3
+            has_trait = education_martial_prowess_4
+            has_trait = education_martial_1
+            has_trait = education_martial_2
+            has_trait = education_martial_3
+            has_trait = education_martial_4
+        }
+
+        is_ruler = yes
+        OR = {
+            is_ai = no
+            highest_held_title_tier >= tier_county
+        }
+        has_culture_group = culture_group:north_germanic_group
+        faith.religion = religion:germanic_religion
+	}
+
+	is_valid_showing_failures_only = {
+        is_physically_able_adult = yes
+
+		NOT = {
+			is_imprisoned = yes
+		}
+
+		# Needs enough prowess
+        custom_description = {
+            text = not_enough_prowess
+            prowess > 9
+        }
+
+        # Can't be incapable
+        NOT = {
+            has_trait = incapable
+        }
+
+        # Can't be inbred
+        NOT = {
+            has_trait = inbred
+        }
+	}
+
+    cost = { gold = appoint_shieldmaiden_cost }
+
+	effect = {
+
+		send_interface_toast = {
+			title = msg_became_shieldmaiden
+			left_icon = root
+
+			add_trait = shieldmaiden
+
+            add_prestige = appoint_shieldmaiden_prestige_gain
+		}
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+### Retire as Shieldmaiden
+retire_as_shieldmaiden_decision = {
+	ai_check_interval = 0
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+
+	desc = retire_as_shieldmaiden_decision_desc
+
+	selection_tooltip = retire_as_shieldmaiden_decision_tooltip
+
+	cooldown = { days = @shieldmaiden_cooldown_time }
+
+	is_shown = {
+        has_trait = shieldmaiden
+        has_culture_group = culture_group:north_germanic_group
+        faith.religion = religion:germanic_religion
+	}
+
+	effect = {
+
+		send_interface_toast = {
+			title = msg_stopped_being_shieldmaiden
+			left_icon = root
+
+			remove_trait = shieldmaiden
+		}
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
