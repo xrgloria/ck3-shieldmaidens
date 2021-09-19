@@ -11,6 +11,7 @@ Content
 * Adds new Shieldmaiden trait for female warriors in the court of a Pagan Norse leader (North Germantic Culture Group [Danish, Norse, Norwegian, and Swedish] and Ásatrú) 
 * Appoint them via a new interaction, which gives them the Shieldmaiden trait
 * Relieve them of their duties with a new interaction, which removes the Shieldmaiden trait
+* Give yourself the Shieldmaiden trait via new Decisions
 
 
 Features
@@ -30,7 +31,7 @@ Roadmap
 * Allow hostile religions leaders who somehow gain Shieldmaidens to remove the trait on interaction? IDK why that'd want to...
 
 
-Support & Contact[/h1]
+Support & Contact
 It's my first mod for the game, let me know if you run into any issues or have suggestions.
 
 ### For Steam
@@ -60,6 +61,7 @@ Based on CK2's Shieldmaiden trait.
     [*] Adds new Shieldmaiden trait for female warriors in the court of a Pagan Norse leader
     [*] Appoint them via a new interaction, which gives them the Shieldmaiden trait
     [*] Relieve them of their duties with a new interaction, which removes the Shieldmaiden trait
+    [*] Give yourself the Shieldmaiden trait via new Decisions
 [/list]
 
 [h2]Ruler (Player)[/h2]
@@ -78,7 +80,7 @@ Replies from potential Shieldmaidens might take from 2-7 days.
 [list]
     [*] Adult
     [*] Female (kinda a given but still listing it here)
-    [*] Prowess must be 10 or greater
+    [*] Prowess must be 12 or greater
     [*] Any of the following traits 
     [list]
         [*] Brave

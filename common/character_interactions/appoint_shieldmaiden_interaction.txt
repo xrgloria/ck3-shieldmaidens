@@ -1,18 +1,30 @@
 ﻿appoint_shieldmaiden_interaction = {
     category = interaction_category_vassal
 
-    # maybe AIs a bit later
+    #ai_targets = {
+	#	ai_recipients = courtiers
+	#}
+	#ai_frequency = 180
 
     is_shown = {
-        scope:recipient = {
-            NOT = { 
-                this = scope:actor
-                # Can't be a shieldmaiden again
-                has_trait = shieldmaiden
+		scope:actor = {
+            is_ruler = yes
+			is_physically_able_adult = yes
+			has_culture_group = culture_group:north_germanic_group
+            religion = religion:germanic_religion
+            OR = {
+                is_ai = no
+                highest_held_title_tier >= tier_county
             }
+        }
+
+        scope:recipient = {
+			NOT = { this = scope:actor }
+			NOT = { has_trait = incapable }
+			is_courtier_of = scope:actor
+            NOT = {  has_trait = shieldmaiden }
 
             is_female = yes
-            is_adult = yes
 
             OR = { 
                 has_trait = brave
@@ -39,332 +51,30 @@
                 has_trait = education_martial_3
                 has_trait = education_martial_4
             }
-            
-            # Anyone can be a shieldmaiden if they are in the culture
-            # has_culture_group = culture_group:north_germanic_group
-
-            is_courtier_of = scope:actor
-        }
-
-        scope:actor = {
-            is_ruler = yes
-            OR = {
-                is_ai = no
-                highest_held_title_tier >= tier_county
-            }
-
-            has_culture_group = culture_group:north_germanic_group
-            faith.religion = religion:germanic_religion
         }
     }
 
     is_valid_showing_failures_only = {
-		is_physically_able_adult = yes
-		
-        NOT = {
-            scope:recipient = {
-                is_imprisoned = yes
-            }
-        }
-
-        # Needs enough prowess
         scope:recipient = {
-            custom_description = {
-                text = not_enough_prowess
-                prowess > 9
-            }
-        }
-
-        # Can't be incapable
-        NOT = {
-            scope:recipient = {
-                has_trait = incapable
-            }
-        }
-
-        # Can't be inbred
-        NOT = {
-            scope:recipient = {
-                has_trait = inbred
-            }
-        }
+			prowess >= decent_skill_rating
+			is_adult = yes
+			is_imprisoned = no
+		}
     }
 
     greeting = positive
     notification_text = OFFER_SHIELDMAIDEN_APPOINTMENT_NOTIFICATION
 
-    ai_min_reply_days = 2
-	ai_max_reply_days = 7
-
-    ai_accept = {
-        base = 20
-        #MAIN
-		#Heretic/Infidel modifier.
-
-		#MINOR
-		#Rivalry modifier.
-		#Same Dynasty modifier.
-		#Cultural/Cultural Group modifiers.
-
-		#OPINION SCALES
-		#Dread
-		#Compare Opinion modifier.
-
-        #PERKS
-        modifier = { # Perk boost
-			desc = offer_vassalization_true_ruler_perk_tt
-			trigger = {
-				scope:actor = { has_perk = true_ruler_perk }
-			}
-			add = true_ruler_value
-		}
-
-        #MAIN
-		modifier = { #Different faith, no pluralism.
-			desc = offer_vassalization_interaction_aibehavior_differentfaith_tt
-			trigger = {
-				scope:recipient = {
-					NOR = { #Of two different faiths AND the potential vassal's faith is not pluralistic.
-						faith = scope:actor.faith
-						faith = { has_doctrine = doctrine_pluralism_pluralistic }
-					}
-				}
-			}
-			add = {
-				value = -40
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_hostile_level
-							}
-						}
-					}
-					add = -40
-				}
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_evil_level
-							}
-						}
-					}
-					add = -40
-				}
-			}
-		}
-		
-		modifier = { #Different faith, pluralism.
-			desc = offer_vassalization_interaction_aibehavior_differentfaith_tt
-			trigger = {
-				scope:recipient = {
-					NOT = {
-						faith = scope:actor.faith
-					}
-					NOT = {
-						scope:actor.faith = { has_doctrine = doctrine_pluralism_pluralistic }
-					}
-					faith = { has_doctrine = doctrine_pluralism_pluralistic }
-				}
-			}
-			add = {
-				value = -20
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_hostile_level
-							}
-						}
-					}
-					add = -20
-				}
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_evil_level
-							}
-						}
-					}
-					add = -20
-				}
-			}
-		}
-		
-		modifier = { #Different faith, both have pluralism.
-			desc = offer_vassalization_interaction_aibehavior_differentfaith_tt
-			trigger = {
-				scope:recipient = {
-					NOT = {
-						faith = scope:actor.faith
-					}
-					scope:actor.faith = { has_doctrine = doctrine_pluralism_pluralistic }
-					faith = { has_doctrine = doctrine_pluralism_pluralistic }
-				}
-			}
-			add = {
-				value = -10
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_hostile_level
-							}
-						}
-					}
-					add = -10
-				}
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_evil_level
-							}
-						}
-					}
-					add = -10
-				}
-			}
-		}
-
-        modifier = { #Wide difference in rank
-			desc = offer_vassalization_interaction_aibehavior_widetitletier_tt
-			trigger = {
-				scope:actor = {
-					tier_difference = {
-						target = scope:recipient
-						value > 1
-					}
-				}
-			}
-			add = 25
-		}
-
-        #MINOR
-
-		modifier = { #Friend modifier.
-			desc = offer_vassalization_interaction_aibehavior_friend_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_friend = scope:actor
-					NOT = { has_relation_best_friend = scope:actor }
-				}
-			}
-			add = 10
-		}
-		modifier = { #Best Friend modifier.
-			desc = offer_vassalization_interaction_aibehavior_best_friend_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_best_friend = scope:actor
-				}
-			}
-			add = 20
-		}
-		modifier = { #Rivalry modifier.
-			desc = offer_vassalization_interaction_aibehavior_rival_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_rival = scope:actor
-					NOT = { has_relation_nemesis = scope:actor }
-				}
-			}
-			add = -10
-		}
-		modifier = { #Nemesis modifier.
-			desc = offer_vassalization_interaction_aibehavior_nemesis_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_nemesis = scope:actor
-				}
-			}
-			add = -1000
-		}
-        
-		modifier = { #Same Dynasty modifier.
-			desc = offer_vassalization_interaction_aibehavior_dynasty_tt
-			trigger = {
-				scope:recipient = {
-					dynasty = scope:actor.dynasty
-				}
-			}
-			add = 5
-		}
-		modifier = { #Cultural modifiers.
-			add = -10
-			desc = offer_vassalization_interaction_aibehavior_culture_tt
-			trigger = {
-				scope:actor = {
-					has_same_culture_group_as = scope:recipient
-					NOT = { has_same_culture_as = scope:recipient }
-				}
-			}
-		}
-		
-		modifier = { #Cultural Group modifiers.
-			add = -30
-			desc = offer_vassalization_interaction_aibehavior_culture_group_tt
-			trigger = {
-				scope:actor = {
-					NOT = { has_same_culture_group_as = scope:recipient }
-				}
-			}
-		}
-
-        #OPINION INFLUENCE
-		modifier = {
-			add = 10
-			scope:recipient = {
-				has_dread_level_towards = {
-					target = scope:actor
-					level = 1
-				}
-			}
-			desc = INTIMIDATED_REASON
-		}
-		modifier = {
-			add = 20
-			scope:recipient = {
-				has_dread_level_towards = {
-					target = scope:actor
-					level = 2
-				}
-			}
-			desc = COWED_REASON
-		}
-		opinion_modifier = { #Compare Opinion modifier.
-			who = scope:recipient
-			opinion_target = scope:actor
-			multiplier = 0.35
-		}
-    }
-
-    cost = { gold = appoint_shieldmaiden_cost }
-
     on_accept = {
         scope:actor = {
-            # TODO: roll all of this into an interaction effect to be cleaner
-
-            #send_interface_toast = {
-            #    type = event_generic_neutral
-            #    title = msg_appointed_shieldmaiden_interaction_title
-            #    right_icon = scope:recipient
-            #
-            #    custom_tooltip = msg_appointed_shieldmaiden_interaction_desc
-            #}
-
-            #recognize_shieldmaiden_interaction_effect = yes
             trigger_event = char_interaction.6121
             
             add_prestige = appoint_shieldmaiden_prestige_gain
+
+			stress_impact = {
+				arrogant = medium_stress_impact_gain
+				paranoid = minor_stress_impact_gain
+			}
         }
 
         scope:recipient = {
@@ -394,9 +104,136 @@
         }
     }
 
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			AND = {
+				always = scope:hook
+				scope:actor = { has_strong_hook = scope:recipient }
+			}
+		}
+	}
+
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = SCHEME_HOOK
+	}
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+	
+	send_options_exclusive = no
+
+	cost = { gold = appoint_shieldmaiden_cost }
+
     on_decline = {
 		scope:actor = {
 			trigger_event = char_interaction.6122
 		}
 	}
+
+	#ai_potential = {
+	#	religion = religion:germanic_religion
+	#	has_culture_group = culture_group:north_germanic_group
+	#	prestige > major_prestige_value
+	#	is_physically_able_adult = yes
+	#}
+
+	#auto_accept = no
+
+	ai_min_reply_days = 2
+	ai_max_reply_days = 7
+
+	ai_accept = {
+		base = 0
+
+		modifier = {
+			trigger = {
+				always = scope:hook
+			}
+			add = 100
+			desc = SCHEME_WEAK_HOOK_USED
+		}
+
+		modifier = {
+			trigger = {
+				has_education_martial_trigger = yes
+			}
+			add = 20
+			desc = INTERACTION_MARTIAL_EDUCATION
+		}
+		
+		# Weight up for personality values.
+		ai_value_modifier = {
+			who = scope:recipient
+			ai_boldness = {
+				if = {
+					limit = {
+						scope:recipient = {
+							NOT = { ai_boldness = 0 }
+						}
+					}
+					value = 0.5
+				}
+			}
+			ai_compassion = {
+				if = {
+					limit = {
+						scope:recipient = {
+							NOT = { ai_compassion = 0 }
+						}
+					}
+					value = -0.5
+				}
+			}
+		}
+		
+		modifier = {
+			add = -1000
+			has_trait = craven
+			desc = INTERACTION_CRAVEN
+		}
+		
+		modifier = {
+			add = -50
+			has_trait = content
+			desc = INTERACTION_CONTENT
+		}
+		
+		modifier = {
+			add = -50
+			has_trait = humble
+			desc = INTERACTION_HUMBLE
+		}
+		
+		modifier = {
+			add = -50
+			has_trait = lazy
+			desc = INTERACTION_LAZY
+		}
+		
+		modifier = {
+			add = 100
+			has_trait = brave
+			desc = INTERACTION_BRAVE
+		}
+		
+		modifier = {
+			add = 25
+			has_trait = ambitious
+			desc = INTERACTION_AMBITIOUS
+		}
+	}
+	
+	#ai_will_do = {
+	#	base = 100
+	#}
 }

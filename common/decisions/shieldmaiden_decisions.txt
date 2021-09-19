@@ -11,13 +11,18 @@ train_as_shieldmaiden_decision = {
     cooldown = { days = @shieldmaiden_cooldown_time }
 
 	is_shown = {
-		NOT = { 
-            # Can't be a shieldmaiden again
-            has_trait = shieldmaiden 
+        is_ruler = yes
+        OR = {
+            is_ai = no
+            highest_held_title_tier >= tier_county
         }
+        has_culture_group = culture_group:north_germanic_group
+        faith.religion = religion:germanic_religion
+
+		NOT = { has_trait = incapable }
+        NOT = {  has_trait = shieldmaiden }
 
         is_female = yes
-        is_adult = yes
 
         OR = { 
             has_trait = brave
@@ -44,38 +49,12 @@ train_as_shieldmaiden_decision = {
             has_trait = education_martial_3
             has_trait = education_martial_4
         }
-
-        is_ruler = yes
-        OR = {
-            is_ai = no
-            highest_held_title_tier >= tier_county
-        }
-        has_culture_group = culture_group:north_germanic_group
-        faith.religion = religion:germanic_religion
 	}
 
 	is_valid_showing_failures_only = {
-        is_physically_able_adult = yes
-
-		NOT = {
-			is_imprisoned = yes
-		}
-
-		# Needs enough prowess
-        custom_description = {
-            text = not_enough_prowess
-            prowess > 9
-        }
-
-        # Can't be incapable
-        NOT = {
-            has_trait = incapable
-        }
-
-        # Can't be inbred
-        NOT = {
-            has_trait = inbred
-        }
+		prowess >= decent_skill_rating
+        is_adult = yes
+        is_imprisoned = no
 	}
 
     cost = { gold = appoint_shieldmaiden_cost }
